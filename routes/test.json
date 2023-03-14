@@ -1,0 +1,34 @@
+{
+    "name": "pushtwo",
+    "notificationGroupId": "6409c0dbe5d10c2178942e3f",
+    "tags": [],
+    "critical": false,
+    "preferenceSettings": {
+        "email": true,
+        "sms": true,
+        "in_app": true,
+        "chat": true,
+        "push": true
+    },
+    "steps": [
+        {
+            "template": {
+                "content": "Hello Sapar! this is push five!",
+                "title": "Pushfive title",
+                "type": "push",
+                "contentType": "editor",
+                "variables": []
+            },
+            "_id": "61bbee12-ec9a-4693-bb50-3288e3dd4035",
+            "active": true,
+            "shouldStopOnFail": false,
+            "filters": [
+                {
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "active": true,
+    "draft": false
+}
