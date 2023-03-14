@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe33f98a750b8c5a51b30c78bd3fab21",
+    "content-hash": "e8c197ad57b4320de4974ef6fd86ac40",
     "packages": [
         {
             "name": "brick/math",
@@ -5288,6 +5288,60 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.6"
             },
             "time": "2023-01-03T09:29:04+00:00"
+        },
+        {
+            "name": "unicodeveloper/novu",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/novuhq/php.git",
+                "reference": "191c7188f749c8978b1fdc9380a6b2d41a7cc49f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/novuhq/php/zipball/191c7188f749c8978b1fdc9380a6b2d41a7cc49f",
+                "reference": "191c7188f749c8978b1fdc9380a6b2d41a7cc49f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.5.7|^7.4.4",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.2.1",
+                "pestphp/pest": "^1.20.0",
+                "phpstan/phpstan": "^1.1.1",
+                "symfony/var-dumper": "^5.3.10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Novu\\SDK\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Prosper Otemuyiwa",
+                    "email": "prosperotemuyiwa@gmail.com"
+                }
+            ],
+            "description": "The Novu PHP SDK",
+            "keywords": [
+                "infrastructure",
+                "notifications",
+                "novu",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/novuhq/php/issues",
+                "source": "https://github.com/novuhq/php/tree/1.0.4"
+            },
+            "time": "2023-03-03T11:24:15+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
