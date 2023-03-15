@@ -15,7 +15,7 @@ class NotificationsController extends Controller
 
     public function __construct()
     {
-        $this->novu = new Novu(config('novu.novu_api_key'));    
+        $this->novu = new Novu(config('novu.novu_api_key'));
     }
 
     public function getNotificationsGroups()
@@ -46,21 +46,22 @@ class NotificationsController extends Controller
             // "critical" => true,
             // "preferenceSettings" => preferenceSettings
         ])->toArray();
-    
+
         return response()->json($res, Response::HTTP_CREATED);
     }
 
     public function createSubscriber()
     {
         $subscriber = $this->novu->createSubscriber([
-            'subscriberId' => 'some_user_ID_7873',
-            'email' => 'someexample@mail.com', // optional
-            // 'firstName' => '<insert-firstname>', // optional
-            // 'lastName' => '<insert-lastname>', // optional
+            'subscriberId' => 'vito_co',
+            'email' => 'vito.co@ya.ru',
+
+            'firstName' => 'Vito',
+            'lastName' => 'Co', // optional
             // 'phone' => '<insert-phone>', //optional
             // 'avatar' => '<insert-avatar>', // optional
         ])->toArray();
-    
+
         return response()->json($subscriber, Response::HTTP_CREATED);
     }
 
@@ -72,7 +73,7 @@ class NotificationsController extends Controller
                 'deviceTokens' => ['dkxDmkwKQUO1GIMm0WxmQu:APA91bHwOlZ_U4zAqTBMIChonu-MQVqIRi_AZYKEXzmP5FNP8lYgFbwQHouTq_RvkvprgC6rCcCqUgrSKeDIkq8gS4A_xENERX2Lqwepjf9cPQBBxzJa4QeMqi1NRGsaTRHxQujUsRwo']
             ]
         ])->toArray();
-    
+
         return response()->json($response);
     }
 
@@ -86,7 +87,17 @@ class NotificationsController extends Controller
                 // 'phone' => '07983882186'
             ]
         ])->toArray();
-    
+
+        $response = $this->novu->triggerEvent([
+            'name' => 'appointment',
+            'payload' => [
+                'language' => 'en',
+            ],
+            'to' => [
+                'subscriberId' => 'vito_co',
+            ],
+        ])->toArray();
+
         return response()->json($response);
     }
 }
